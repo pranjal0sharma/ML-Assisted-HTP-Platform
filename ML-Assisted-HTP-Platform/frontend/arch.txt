@@ -1,0 +1,16 @@
+src/
+├── api/
+│   └── index.js             # Centralized API calls
+├── components/
+│   ├── AdminDashboard.js
+│   ├── AssessorDashboard.js
+│   ├── UploaderDashboard.js
+│   └── ProtectedRoute.js    # For role-based access
+├── context/
+│   └── AuthContext.js       # Global state for authentication
+├── pages/
+│   ├── HomePage.js
+│   └── LoginPage.js
+├── App.css
+├── App.js
+└── index.js

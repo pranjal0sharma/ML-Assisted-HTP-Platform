@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- Foundational Styles --- */
+.uploader-container {
+    background-color: #F8F9FA;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    color: #212529;
+}
+
+/* --- Header --- */
+.uploader-header {
+    background: white;
+    padding: 1rem 2.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.uploader-logo {
+    max-height: 40px;
+}
+
+.header-title h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #121212;
+    font-weight: 600;
+}
+
+.header-subtitle {
+    font-size: 0.8rem;
+    color: #6C757D;
+    font-weight: 400;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-home {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    background: transparent;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    color: #495057;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-home svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-home:hover {
+    background: #f1f3f5;
+    border-color: #adb5bd;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #d32f2f; /* A distinct red for logout */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: #c62828;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
+
+/* --- Main Content Area --- */
+.uploader-main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem;
+}
+
+/* --- Uploader Home Screen --- */
+.uploader-home .welcome-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.uploader-avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1.5rem;
+    background: #386641;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 8px 20px rgba(56, 102, 65, 0.15);
+}
+
+.uploader-avatar svg {
+    width: 45px;
+    height: 45px;
+}
+
+.uploader-home .welcome-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 0.5rem;
+}
+
+.uploader-home .welcome-subtitle {
+    font-size: 1.1rem;
+    color: #6C757D;
+}
+
+.uploader-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.uploader-action-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.uploader-action-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    border-color: #386641;
+}
+
+.uploader-action-card .card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.uploader-action-card .card-icon svg { width: 24px; height: 24px; }
+.upload-icon { background: #386641; }
+.status-icon { background: #1d4ed8; }
+
+.uploader-action-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #121212;
+    margin: 0 0 0.75rem;
+}
+
+.uploader-action-card p {
+    color: #6C757D;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* --- General Content Card (For Forms, Status Pages) --- */
+.uploader-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e9ecef;
+}
+
+.uploader-card .page-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1.5rem;
+}
+
+.uploader-card .back-button {
+    background: transparent;
+    border: 1px solid #ced4da;
+    color: #495057;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.uploader-card .back-button:hover { background: #f1f3f5; }
+.uploader-card .back-button svg { width: 20px; height: 20px; }
+
+.uploader-card h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+.uploader-card .subtitle {
+    font-size: 1rem;
+    color: #6C757D;
+    margin-top: 0.25rem;
+}
+
+/* --- Upload Form --- */
+.image-dropzone {
+    border: 2px dashed #ced4da;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    color: #6C757D;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.image-dropzone:hover {
+    border-color: #386641;
+    background-color: #f8f9fa;
+}
+.image-dropzone img {
+    max-width: 100%;
+    max-height: 150px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #386641;
+    box-shadow: 0 0 0 3px rgba(56, 102, 65, 0.1);
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #386641;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #2a4c32;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 102, 65, 0.2);
+}
+
+/* --- Submission Status Table --- */
+.status-table-container {
+    background: white;
+    border-radius: 12px;
+    overflow-x: auto;
+    border: 1px solid #e9ecef;
+}
+.submission-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.submission-table thead {
+    background-color: #f8f9fa;
+}
+.submission-table th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6C757D;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    border-bottom: 1px solid #dee2e6;
+}
+.submission-table tbody tr {
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.2s ease;
+}
+.submission-table tbody tr:last-child {
+    border-bottom: none;
+}
+.submission-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+.submission-table td {
+    padding: 1rem 1.5rem;
+    color: #495057;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+/* --- Status Badges (Replaces simple color text) --- */
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+/* For Screening / In Progress */
+.status-screening {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+/* For Follow-up / Action Needed */
+.status-followup {
+    background: #fff3cd;
+    color: #856404;
+}
+/* For Completed / No Concerns */
+.status-completed {
+    background: #E8F5E9;
+    color: #386641;
+}
+
+/* --- Custom Alert (No Library) --- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050; /* Higher z-index to be on top of everything */
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 320px;
+    max-width: 90%;
+    animation: fadeInDown 0.3s ease-out;
+}
+
+.custom-alert p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.custom-alert.alert-success {
+    background-color: #E8F5E9;
+    color: #386641;
+    border: 1px solid #b6d3b9;
+}
+
+.custom-alert.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.custom-alert.alert-info {
+    background-color: #cce5ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+}
+
+.alert-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.7;
+    padding: 0 0 0 1rem;
+    margin-left: auto; /* Pushes the button to the far right */
+}
+
+.alert-close-btn:hover {
+    opacity: 1;
+}
+
+/* Add this to your UploaderDashboard.css file */
+
+/* --- Improved Empty State --- */
+.no-activity {
+    text-align: center;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #e2e8f0;
+    border-radius: 12px;
+    background-color: #fdfdff;
+    margin-top: 2rem;
+}
+.no-activity-icon {
+    width: 48px;
+    height: 48px;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+}
+.no-activity-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #475569;
+    margin: 0 0 0.25rem;
+}
+.no-activity-text {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+    max-width: 350px;
+}
+
+/* --- Status Badges (Replaces simple color text) --- */
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 1.4;
+    background: #e9ecef; /* Default grey color */
+    color: #495057;
+}
+
+/* THE FIX: New style for red badges for "Flagged for Review" */
+.status-flagged {
+    background-color: #f8d7da; /* Light Red */
+    color: #721c24;         /* Dark Red Text */
+}
+
+/* For Follow-up / Action Needed (Yellow/Orange) */
+.status-followup {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* For Completed / No Concerns (Green) */
+.status-completed {
+    background: #E8F5E9;
+    color: #386641;
+}
+
+/* For Screening / In Progress (Blue/Purple) */
+.status-screening {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+
+
+/* --- Table Row Highlighting Cases --- */
+.submission-table tbody tr.row-flagged {
+    border-left: 4px solid #d32f2f;
+    background-color: #ffffff;
+}
+
+.submission-table tbody tr.row-flagged:hover {
+    background-color: #fee2e2;
+}
+
+.submission-table tbody tr.row-followup {
+    border-left: 4px solid #ff9800;
+    background-color: #ffffff;
+}
+.submission-table tbody tr.row-followup:hover {
+    background-color: #fff7e6;
+}
+
+.submission-table tbody tr.row-completed {
+    border-left: 4px solid #386641;
+    background-color: #ffffff;
+}
+.submission-table tbody tr.row-completed:hover {
+    background-color: #e6f4ea;
+}
+.submission-table tbody tr.row-screening {
+    border-left: 4px solid #4338ca;
+    background-color: #ffffff;
+}
+.submission-table tbody tr.row-screening:hover {
+    background-color: #e0e7ff;
+}
